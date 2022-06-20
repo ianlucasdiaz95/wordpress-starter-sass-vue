@@ -1,2 +1,2 @@
-# wordpress-starter-sass
-WordPress Starter Template - Gulp + Sass
+# WordPress Starter Template with Vue and SASS
+
