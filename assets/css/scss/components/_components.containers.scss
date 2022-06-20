@@ -1,0 +1,30 @@
+.siteContent{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-gap: 30px;
+    min-height: calc(100vh - #{$contentOffset});
+    margin: 20px auto;
+    margin-top: $headerHeight + 20px !important;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+
+.page-template-page-fullwidth{
+    .siteContent{
+        grid-template-columns: 1fr;
+    }
+}
+
+.blogContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container{
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+    @media screen and (max-width: $containerMaxWidth) {
+        margin: 0 20px;
+    }
+}

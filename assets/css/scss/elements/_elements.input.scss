@@ -1,0 +1,89 @@
+.input{
+    &__label{
+        color: $black;
+        font-size: 1.2rem;
+        opacity: 0.9;
+
+        &.-inline{
+            display: inline-block;
+            margin-bottom: 0px;
+            margin-right: 10px;
+        }
+    }
+    &__field{
+        min-height: $inputMinHeight;
+        font-size: 1.2rem;
+        width: 100%;
+        border:1px solid $grey-lighten-1;
+        padding: 10px;
+
+        @include transition(all, .3s);
+
+        &:focus{
+            border:1px solid $famlyPrimary;
+            background-color: $grey-lighten-4;
+        }
+        &.-textarea{
+            vertical-align: top;
+        }
+
+        &.-select{
+            @media (max-width: $breakPointSmall){
+                width: 100%;
+            }
+        }
+
+        &.-checkbox{
+            display: inline-block;
+            width: 20px;
+            min-height: 30px;
+        }
+    }
+    &__submit{
+        background: $famlyBlueDark;
+        @include border-radius(30px);
+        text-align: center;
+        padding: 10px 25px;
+        font-size: 1.0rem;
+        outline: 0;
+        color: $white;
+        border: 0px;
+        margin-left: auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i,svg{
+            font-size: 1.5rem;
+            margin-left: 20px;
+            @include transition(300ms ease);
+        }
+        &:hover{
+            i,svg{
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    &.-white{
+        .input__label{
+            color: $white;
+        }
+    }
+    &.-grey{
+        .input__field{
+            background: $grey-lighten-4;
+        }
+    }
+    &.-shadow{
+        .input__field{
+            border: none;
+            @include box-shadow(0px 1px 3px rgba(0,0,0,0.16));
+        }
+    }
+
+    &.-verticalCenter{
+        display: flex;
+        align-items: center;
+    }
+}

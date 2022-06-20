@@ -1,0 +1,17 @@
+.widgetArea{
+    ul {
+    padding: 0;
+        li{
+        list-style-type: none;
+        }
+    }
+    @media screen and (max-width: 768px) {
+         display: none;
+    } 
+}
+.widget{
+    background: $lightGray;
+    margin-bottom: 20px;
+    color: $black;
+    @include boxElement;
+}

@@ -1,0 +1,40 @@
+.commentList {
+	list-style: none;
+	padding: 0;
+    margin: 0;
+    .comment {
+	padding: 20px 0;
+	margin: 20px 0;
+	border-bottom: 1px solid #e8e8f0;
+    }
+}
+
+.avatar {
+	display: inline-flex;
+	margin-right: 15px;
+}
+
+.says {
+	display: none;
+}
+
+.comment-author {
+	display: flex;
+    align-items: center;
+}
+
+.comment-meta {
+	display: flex;
+	align-items: center;
+}
+
+.comment-metadata a {
+	padding: 0 0 0 15px;
+	color: $black;
+	font-size: .9rem;
+}
+
+.reply a {
+	color: $black;
+	font-size: .9rem;
+}

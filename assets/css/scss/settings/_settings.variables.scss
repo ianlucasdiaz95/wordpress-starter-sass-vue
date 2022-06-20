@@ -1,0 +1,44 @@
+// Brand colors
+$primary:  #7FDBFF;
+$secondary: #111;
+
+// Base colors
+$white:  #fff;
+$black:  #111;
+$gray: #ccc;
+$lightGray: #f2f2f2;
+
+
+// Fonts
+
+$primaryFont: 'Montserrat', sans-serif;
+$secondaryFont: 'Nunito', sans-serif;
+
+//
+// Project Variables
+//
+
+//General
+$boxPadding: 16px;
+$containerMaxWidth: 1100px;
+$boxShadow: 0px 1px 3px rgba(0,0,0,0.16);
+
+//Breakpoints
+$breakPointLarge: 1440px;
+$breakPointMedium: 991px;
+$breakPointSmall: 768px;
+$breakPointXSmall: 575px;
+
+// Header
+$headerLogoWidth: 120px;
+$headerHeight: 60px;
+
+//Hamburguer 
+$hamburguerHeight: 2px;
+$hamburguerWidth: 25px;
+$hamburguerSpace: 7px;
+
+//Footer
+$footerHeight: 60px;
+//Content
+$contentOffset: $footerHeight + $headerHeight;

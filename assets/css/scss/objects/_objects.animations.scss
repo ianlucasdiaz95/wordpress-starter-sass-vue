@@ -1,0 +1,8 @@
+@keyframes stickyMenuSlide {
+  from {
+      transform: translateY(-$headerHeight);
+    }
+  to {
+      transform: translateY(0px);
+    }
+}

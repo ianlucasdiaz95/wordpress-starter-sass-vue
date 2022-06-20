@@ -1,0 +1,21 @@
+//newButton
+.btn{
+  @include button($famlyPrimary, $white);
+  outline: 0 !important;
+
+  //modifiers
+
+  &.-center{
+    margin: 0 auto;
+  }
+
+  &.-light{
+     @include button($lifan-grey-light, $greyDark);
+  }
+
+  &.-simple{
+     @include button($white, $greyDark);
+     padding-left: 10px;
+  }
+
+}

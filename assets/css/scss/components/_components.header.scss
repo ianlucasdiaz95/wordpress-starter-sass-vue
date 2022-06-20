@@ -1,0 +1,24 @@
+.header{
+    margin: 0 auto;
+    color: #555;
+    border-bottom: 1px solid $lightGray;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    height: $headerHeight;
+    background: $white;
+    
+    .header__headerContent{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .header__siteTitle{
+        margin: 0;
+        font-size: 1.4rem;
+    }
+}
+

@@ -1,0 +1,12 @@
+@mixin boxElement{
+    border-radius: 4px;
+    border: 1px solid $lightGray;
+    box-shadow: $boxShadow;
+    padding: $boxPadding;
+}
+
+@mixin hamburgerBar($width, $height, $color){
+    width: $width;
+    height: $height;
+    background: $color;
+}

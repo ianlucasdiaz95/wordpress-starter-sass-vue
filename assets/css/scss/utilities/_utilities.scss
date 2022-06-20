@@ -1,0 +1,39 @@
+.-preventScroll{
+    overflow-y: hidden;
+}
+
+.-hidden{
+    transform: translateX(100%);
+}
+
+.-open{
+    transform: translateX(0);
+}
+
+.-menuOpen{
+    background: $secondary !important;
+    transform: rotate(-135deg);
+    &::after{
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    &::before{
+        background: $secondary !important;
+        transform: rotate(90deg);
+        top: 0px !important;
+    }
+}
+
+.-isStuck{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    transform: translateY(-$headerHeight);
+    animation-fill-mode: both;
+    animation-name: stickyMenuSlide;
+    animation-duration: 300ms;
+    animation-delay: 500ms;
+}
+
+

@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body{
+    font-family: $secondaryFont;
+    color: $black;
+    background: $white;
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}

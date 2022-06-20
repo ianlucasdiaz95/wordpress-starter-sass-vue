@@ -1,0 +1,166 @@
+/*NEW FORM*/
+
+
+.form{
+  margin: 40px 0;
+  position: relative;
+  &__row{
+    display:grid;
+    grid-gap: 20px;
+    margin: 20px 0;
+    &.-three{
+      grid-template-columns: 1fr 1fr 1fr;
+
+      @media(max-width: $breakPointXSmall){
+        grid-template-columns: 1fr;
+      }
+      
+    }
+    &.-two{
+      grid-template-columns: 1fr 1fr;
+
+      @media(max-width: $breakPointMedium){
+        grid-template-columns: 1fr;
+      }
+
+    }
+  }
+  &__notice{
+    color: $black;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0;
+    &.-right{
+      text-align: right;
+    }
+  }
+  &__loading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background: rgba(63, 81, 181, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 300ms ease;
+    display: none;
+    p{
+      margin-top: 20px;
+    }
+    .loading {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    .loading div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      margin: 8px;
+      border: 8px solid $white;
+      border-radius: 50%;
+      animation: loading 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #fff transparent transparent transparent;
+    }
+    .loading div:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    .loading div:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    .loading div:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+
+    &.-white{
+      background: rgba(255, 255, 255, 0.8);
+      .loading div {
+        border-color: $famlyPrimary transparent transparent transparent !important;
+      }
+    }
+
+    // States
+    &.-isLoading{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 1;
+    }
+  }
+
+  &__success{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background: rgba(63, 81, 181, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: 300ms ease;
+    display: none;
+    .success{
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+      opacity: 0;
+      transform: rotate(90deg) scale(0.7);
+      transition: 400ms ease-in-out;
+      i,svg{
+        width: 100%;
+        height: 100%;
+        color: $success;
+      }
+      &.-white{
+        background: rgba(255, 255, 255, 0.8);
+      }
+    }
+    p{
+      margin-top: 20px;
+    }
+
+    //states
+
+    &.-isSuccessful{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 1;
+      .success{
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+    }
+  }
+  // Modifiers
+
+  &.-short{
+    max-width: 55%;
+
+    @media(max-width: $breakPointMedium){
+
+    }
+
+    @media (max-width: $breakPointMedium){
+      max-width: 100%;
+    }
+
+  }
+}
+
+// Loading animation
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
